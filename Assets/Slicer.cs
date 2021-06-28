@@ -11,6 +11,8 @@ public class Slicer : MonoBehaviour
     [SerializeField] private float _offsetY;
 
     private BzKnife _knife;
+    private float _durationPassed = 0;
+    
 
     private void Start()
     {
@@ -19,10 +21,15 @@ public class Slicer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            _knife.BeginNewSlice();
-            _blade.transform.DOMoveY(_blade.transform.position.y - _offsetY, _duration).SetLoops(2, LoopType.Yoyo);
+            if (_durationPassed > _duration * 2)
+            {
+                _durationPassed = 0;
+                _knife.BeginNewSlice();
+                _blade.transform.DOMoveY(_blade.transform.position.y - _offsetY, _duration).SetLoops(2, LoopType.Yoyo);
+            }
+            _durationPassed += Time.deltaTime;
         }
     }
 }
