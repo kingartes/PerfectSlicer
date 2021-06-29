@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PointsCounter : MonoBehaviour
 {
-    private int totalPoints;
+    private int _totalPoints;
 
     public void AddPoints(int pointsAmount)
     {
-        totalPoints += pointsAmount;
-        Debug.Log(totalPoints);
+        _totalPoints += pointsAmount;
+        Debug.Log(_totalPoints);
     }
 }

@@ -685,7 +685,7 @@ MonoBehaviour:
   _templates:
   - {fileID: 140462, guid: 89924b37c5f2b44238bd475c70b8662d, type: 3}
   - {fileID: 116474, guid: e4749021a229047aea3b9ff9ab897bd9, type: 3}
-  _spawnDelay: 1
+  _spawnDelay: 2
 --- !u!1 &2094317102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ed479e3febc95b94681b0ced5b8302d6,
